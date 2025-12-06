@@ -3,7 +3,7 @@
 echo "===> Action end"
 
 # Use saved action token to start it
-RESPONSE=$(curl -s -X POST $BROKER_URL/v1/intention/action/end -H 'X-Broker-Token: '"$ACTION_TOKEN"'')
+RESPONSE=$(curl -s -X POST -G $BROKER_URL/v1/intention/action/end --data-urlencode 'outcome='"$OUTCOME"'' -H 'X-Broker-Token: '"$ACTION_TOKEN"'')
 code=$?
 
 if [ "$code" != "0" ]; then

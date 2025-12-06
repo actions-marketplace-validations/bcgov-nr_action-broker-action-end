@@ -9,8 +9,11 @@ inputs:
     description: The token of the action to end
     required: true
   broker_url:
-    default: https://nr-broker.apps.silver.devops.gov.bc.ca
+    default: https://broker.io.nrs.gov.bc.ca
     description: The broker url.
+  outcome:
+    default: success
+    description: The outcome of the action. Must be 'success', 'failure' or 'unknown'
 
 runs:
   using: "composite"
@@ -22,4 +25,5 @@ runs:
       env:
         ACTION_TOKEN: ${{ inputs.action_token }}
         BROKER_URL: ${{ inputs.broker_url }}
+        OUTCOME: ${{ inputs.outcome }}
       run: action-end.sh
