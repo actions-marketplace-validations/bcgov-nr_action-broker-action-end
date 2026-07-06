@@ -6,7 +6,7 @@ If you encounter an error, ensure that the Broker URL is correct and that the in
 
 # Broker Documentation
 
-Please refer to the [NR Broker Repository](https://github.com/bcgov-nr/nr-broker) for full usage details.
+Please refer to the [NR Broker Repository](https://github.com/bcgov/nr-broker) for full usage details.
 
 # Usage
 
